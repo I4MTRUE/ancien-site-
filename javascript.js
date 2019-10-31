@@ -8,7 +8,7 @@ function pad(number, length) {
   var movie = pad(Math.floor((Math.random() * 2155529) + 1), 7);
   yeet(movie);
 function yeet(movie){
-  $.getJSON("http://www.omdbapi.com/?i=tt"+movie+"&apikey=bf57cc7e", function(data) {
+  $.getJSON("https://www.omdbapi.com/?i=tt"+movie+"&apikey=bf57cc7e", function(data) {
     var title = data.Title;
     var year = data.Year;
     var rating = data.imdbRating;
@@ -18,8 +18,8 @@ function yeet(movie){
     var imdbVotes = data.imdbVotes ;
     var votes = parseInt(imdbVotes,10);
     var type = data.Type;
-    var link = 'http://www.imdb.com/title/tt'+movie+'/';
-    var debug = 'http://www.omdbapi.com/?i=tt'+movie+'&apikey=bf57cc7e'
+    var link = 'https://www.imdb.com/title/tt'+movie+'/';
+    var debug = 'https://www.omdbapi.com/?i=tt'+movie+'&apikey=bf57cc7e'
 
     if (votes > 500) {
     console.log(votes);
